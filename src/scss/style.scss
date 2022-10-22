@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'normalize';
+
+body {
+    background: $background;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+}
+
+.wrapper {
+    max-width: 1164px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.page {
+    background-image: url('../../public/background-block1.png');
+}
