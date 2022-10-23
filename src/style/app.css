@@ -44,6 +44,11 @@ ol[class] {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -78,12 +83,46 @@ select {
   }
 }
 body {
-  background: #272733;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+
+span {
+  color: #07C8C8;
 }
 
 header {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+header a {
+  font-size: 13px;
+  margin-right: 60px;
+}
+header a:hover, header a .active {
+  color: #07C8C8;
+}
+
+.page {
+  background-color: #272733;
+}
+.page_welcome {
+  background-image: url("../../public/background-block-1.png");
+  height: 750px;
+}
+.page_feedback {
+  background-color: #272733;
+  background-image: url("../../public/background-block-2.svg");
+  height: 950px;
+}
+.page_footer {
+  background-color: #3D4050;
 }
 
 .wrapper {
@@ -95,11 +134,177 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header_height {
   height: 100px;
 }
 
-.page {
-  background-image: url("../../public/background-block1.png");
+.footer_height {
+  height: 80px;
+}
+
+.welcome {
+  width: 780px;
+  margin-top: 100px;
+  padding-top: 102px;
+  color: #2A2B30;
+}
+.welcome__title {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 57.6px;
+  margin-bottom: 80px;
+}
+.welcome__text {
+  font-size: 20px;
+}
+.welcome__text p:first-child {
+  font-weight: 700;
+}
+
+.feedback {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 121px;
+}
+.feedback__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.feedback__text {
+  font-size: 20px;
+  color: #BBBBBB;
+  margin-bottom: 80px;
+}
+.feedback__steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 80px;
+  font-size: 16px;
+  position: relative;
+}
+.feedback__steps .dots {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.feedback__steps .item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.feedback__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.feedback__info .input-block {
+  width: 31%;
+}
+.feedback__info .input-range {
+  width: 62%;
+}
+.feedback__info select {
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  opacity: 0.8;
+  outline: none;
+}
+.feedback__info input[type=text] {
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  opacity: 0.8;
+  outline: none;
+}
+.feedback__info input[type=text]:focus {
+  opacity: 1;
+}
+.feedback__info input[type=email] {
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  opacity: 0.8;
+  outline: none;
+}
+.feedback__info input[type=email]:focus {
+  opacity: 1;
+}
+.feedback__info input[type=submit] {
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #07C8C8;
+  color: #fff;
+}
+.feedback__info input[type=submit]:hover {
+  background: #05dfdf;
+}
+.feedback__info .input-file {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  font-size: 15px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #272733;
+  padding: 12px 20px;
+  border: none;
+}
+.feedback__info .input-file div {
+  display: flex;
+  justify-content: center;
+}
+.feedback__info .input-file p {
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+.feedback__info .input-file input[type=file] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+footer {
+  width: 100%;
+}
+footer .border {
+  padding-left: 40px;
+  padding-right: 40px;
+  border-left: 1px solid #C3C3C3;
+  border-right: 1px solid #C3C3C3;
+}
+footer .info {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+footer .info__item {
+  display: flex;
+  gap: 10px;
+}
+footer .info__item a:hover {
+  color: #C3C3C3;
+}
+footer .info__item-grey {
+  display: flex;
+  gap: 10px;
+}
+footer .info__item-grey a {
+  color: #C3C3C3;
+}
+footer .info__item-grey a:hover {
+  color: #fff;
 }
 
 /*# sourceMappingURL=app.css.map */

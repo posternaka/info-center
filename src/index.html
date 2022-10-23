@@ -10,25 +10,131 @@
 </head>
 <body>
     <header>
-        <div class="wrapper">
-            <div class="row">
-                <img src="../public/logo.svg" alt="logo">
-                <nav>
-                    <a href="#">PRODUCT</a>
-                    <a href="#">COMMUNITY</a>
-                    <a href="#">PRICE</a>
-                    <a href="#">BLOG</a>
-                </nav>
+        <div class="page">
+            <div class="wrapper">
+                <div class="row header_height">
+                    <a href="#">
+                        <img src="../public/logo.svg" alt="logo">
+                    </a>
+                    <nav>
+                        <a class="active" href="#">PRODUCT</a>
+                        <a href="#">COMMUNITY</a>
+                        <a href="#">PRICE</a>
+                        <a href="#">BLOG</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
     <section>
-        <div class="page">
+        <div class="page_welcome">
             <div class="wrapper">
-
+                <div class="column">
+                    <div class="welcome">
+                        <h1 class="welcome__title"><span>Lorem ipsum</span> dolor sit amet consectetur <span>adipiscing</span></h1>
+                        <div class="welcome__text">
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+                            <p>- Totam rem aperiam eaque ipsa</p>
+                            <p>- Sit voluptatem accusantium doloremque laudantium</p>
+                            <p>- Sed ut perspiciatis, unde omnis iste natus error</p>
+                        </div>
+                        <div class="btn__block">
+                            <button>ORDER</button>
+                            <button>MORE INFO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_feedback">
+            <div class="wrapper">
+                <div class="feedback">
+                    <h2 class="feedback__title">making <span>an order</span></h2>
+                    <p class="feedback__text">Before filling out the form, check out our work scheme!</p>
+                    <div class="feedback__steps">
+                        <img class="dots" src="../public/page/feedback/dots.png" alt="dots">
+                        <div class="item">
+                            <img src="../public/page/feedback/step_1.svg" alt="step 1">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <div class="item">
+                            <img src="../public/page/feedback/step_2.svg" alt="step 1">
+                            <p>Сonsecteturadipiscing elit</p>
+                        </div>
+                        <div class="item">
+                            <img src="../public/page/feedback/step_3.svg" alt="step 1">
+                            <p>Sed do eiusmod tempor</p>
+                        </div>
+                        <div class="item">
+                            <img src="../public/page/feedback/step_4.svg" alt="step 1">
+                            <p>Esse cillum dolore eu fugiat</p>
+                        </div>
+                        <div class="item">
+                            <img src="../public/page/feedback/step_5.svg" alt="step 1">
+                            <p>Excepteur sint occaecat cupidatat non proident</p>
+                        </div>
+                    </div>
+                    <form method="post" action="">
+                        <div class="feedback__info">
+                            <select class="input-block" name="country">
+                                    <option>Select the system type</option>
+                                    <option value="Sed ut perspiciatis">Sed ut perspiciatis</option> 
+                                    <option value="Nemo enim ipsam">Nemo enim ipsam</option> 
+                                    <option value="Et harum quidem">Et harum quidem</option> 
+                                    <option value="Temporibus autem">Temporibus autem</option> 
+                                    <option value="Itaque earum rerum">Itaque earum rerum</option> 
+                            </select>
+                            <input class="input-block" type="email" placeholder="Your e-mail" required>
+                            <input class="input-block" type="text" placeholder="Your name" required>
+                            <input class="input-range" type="range" required>
+                            <label class="input-block input-file">
+                                <input type="file" name="file">
+                                <div>
+                                    <img src="../public/page/feedback/attach_file.svg" alt="attach file">	
+                                    <p>Attach a file</p>
+                                </div>
+                            </label>
+                            <input class="input-block" type="submit" value="Отправить">
+                        </div>
+                    </form> 
+                </div>
             </div>
         </div>
     </section>
-    <footer></footer>
+    <footer>
+        <div class="page_footer">
+            <div class="wrapper">
+                <div class="row footer_height">
+                    <p>© 2022 «LoremIpsum» Все права защищены.</p>
+                    <div class="border">
+                        <div class="info">
+                            <div class="info__item-grey">
+                                <img src="../public/footer/qiwi-money.svg" alt="Qiwi wallet">
+                                <a href="#">Qiwi wallet</a>
+                            </div>
+                            <div class="info__item-grey">
+                                <img src="../public/footer/yandex-money.svg" alt="Yandex Money">
+                                <a href="#">Yandex Money</a>
+                            </div>
+                            <div class="info__item-grey">
+                                <img src="../public/footer/web-money.svg" alt="Web Money">
+                                <a href="#">Web Money</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__item">
+                            <img src="../public/footer/email.svg" alt="info@ipsum.com">
+                            <a href="#">info@ipsum.com</a>
+                        </div>
+                        <div class="info__item">
+                            <img src="../public/footer/vk.svg" alt="Мы вконтакте">
+                            <a href="#">Мы вконтакте</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
