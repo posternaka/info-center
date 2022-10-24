@@ -38,9 +38,9 @@
                             <p>- Sit voluptatem accusantium doloremque laudantium</p>
                             <p>- Sed ut perspiciatis, unde omnis iste natus error</p>
                         </div>
-                        <div class="btn__block">
-                            <button>ORDER</button>
-                            <button>MORE INFO</button>
+                        <div class="welcome__btns">
+                            <button class="btn">ORDER</button>
+                            <button class="btn btn-turquoise">MORE INFO</button>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                             <p>Excepteur sint occaecat cupidatat non proident</p>
                         </div>
                     </div>
-                    <form method="post" action="">
+                    <form target="_parent">
                         <div class="feedback__info">
                             <select class="input-block" name="country">
                                     <option>Select the system type</option>
@@ -86,15 +86,19 @@
                             </select>
                             <input class="input-block" type="email" placeholder="Your e-mail" required>
                             <input class="input-block" type="text" placeholder="Your name" required>
-                            <input class="input-range" type="range" required>
+                            <label class="input-range">
+                                <div>
+                                    <p>Sed ut perspiciatis, unde omnis iste natus</p>
+                                    <p id="rangeValue">75%</p>
+                                </div>
+                                <input type="range" min="0" max="100" value="75" oninput="rangeValue.innerText = this.value + '%'">
+                            </label>
                             <label class="input-block input-file">
                                 <input type="file" name="file">
-                                <div>
-                                    <img src="../public/page/feedback/attach_file.svg" alt="attach file">	
-                                    <p>Attach a file</p>
-                                </div>
+                                <img src="../public/page/feedback/attach_file.svg" alt="attach file">	
+                                <p>Attach a file</p>
                             </label>
-                            <input class="input-block" type="submit" value="Отправить">
+                            <input class="input-block btn btn-turquoise" type="submit" value="SEND">
                         </div>
                     </form> 
                 </div>

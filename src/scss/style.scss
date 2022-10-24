@@ -3,9 +3,10 @@
 
 body {
     height: 100vh;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-basic;
     font-size: 13px;
     font-weight: 400;
+    line-height: 24px;
     color: #fff;
 }
 
@@ -22,10 +23,14 @@ header {
 
     a {
         font-size: 13px;
+        font-weight: 600;
         margin-right: 60px;
-        &:hover, .active {
-            color: $background-turquoise;
-        }
+        font-family: $font-secondary;
+        line-height: 15.23px;
+    }
+
+    a:hover, .active {
+        color: $background-turquoise;
     }
 }
 
@@ -33,14 +38,14 @@ header {
     background-color: $background;
 
     &_welcome {
-        background-image: url('../../public/background-block-1.png');
-        height: 750px;
+        background: url('../../public/background-block-1.png') no-repeat center center fixed;;
+        background-size: cover;
     }
 
     &_feedback {
+        background: url('../../public/background-block-2.svg') no-repeat center center fixed;;
+        background-size: cover;
         background-color: $background;
-        background-image: url('../../public/background-block-2.svg');
-        height: 950px;
     }
 
     &_footer {
@@ -68,9 +73,13 @@ header {
 }
 
 .welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
     width: 780px;
     margin-top: 100px;
     padding-top: 102px;
+    padding-bottom: 203px;
     color: #2A2B30;
 
     &__title {
@@ -78,7 +87,6 @@ header {
         text-transform: uppercase;
         font-weight: 700;
         line-height: 57.6px;
-        margin-bottom: 80px;
     }
 
     &__text {
@@ -86,6 +94,41 @@ header {
 
         p:first-child {
             font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        gap: 30px;
+        line-height: 15.6px;
+
+        .btn {
+            background: $background-turquoise;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            width: 183px;
+
+            &:hover {
+                background: $background-turquoise-active;
+            }
+        }
+
+        .btn-turquoise {
+            background: #fff;
+            border: 1px solid #2A2B30;
+            color: #2A2B30;
         }
     }
 }
@@ -94,11 +137,15 @@ header {
     text-align: center;
     font-size: 18px;
     padding-top: 121px;
+    padding-bottom: 151px;
 
     &__title {
         font-size: 36px;
         text-transform: uppercase;
         margin-bottom: 30px;
+        line-height: 42.19px;
+        font-family: $font-secondary;
+        font-weight: 400;
     }
 
     &__text {
@@ -113,6 +160,7 @@ header {
         gap: 30px;
         margin-bottom: 80px;
         font-size: 16px;
+        line-height: 19.2px;
         position: relative;
         
         .dots {
@@ -134,14 +182,12 @@ header {
     &__info {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
+        line-height: 21.6px;
 
         .input-block {
-            width: 31%;
-        }
-
-        .input-range {
-            width: 62%;
+            width: 31.6%;
         }
 
         select {
@@ -177,12 +223,14 @@ header {
         }
 
         input[type=submit] {
+            font-size: 15px;
+            font-family: $font-secondary;
+            line-height: 17.58px;
             padding: 10px;
-            border-radius: 3px;
-            border: none;
+            border-radius: 4px;
+            border: 1px solid #FFFFFF;
             outline: none;
             cursor: pointer;
-
             background: $background-turquoise;
             color: #fff;
         }
@@ -191,20 +239,61 @@ header {
             background: $background-turquoise-active;
         }
 
+        .input-range {
+            width: 65.8%;
+            line-height: 21.6px;
+
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            p:last-child {
+                color: #fff8;
+            }
+        }
+          
+        input[type=range] {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 6px;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+        }
+        
+        input[type=range]:hover {
+            opacity: 1;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 40px;
+            height: 40px;
+            background: url('../../public/page/feedback/vector_range.svg');
+            cursor: pointer;
+        }
+          
+
         .input-file {
+            font-family: $font-secondary;
+            font-weight: 300;
             cursor: pointer;
             position: relative;
             outline: none;
             font-size: 15px;
+            line-height: 17.58px;
             border-radius: 3px;
             background-color: #fff;
             color: #272733;
-            padding: 12px 20px;
+            padding: 0 20px;
             border: none;
-            div {
-                display: flex;
-                justify-content: center;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
             p {
                 margin-left: 10px;
                 text-transform: uppercase;

@@ -84,9 +84,10 @@ select {
 }
 body {
   height: 100vh;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato";
   font-size: 13px;
   font-weight: 400;
+  line-height: 24px;
   color: #fff;
 }
 
@@ -103,9 +104,12 @@ header {
 }
 header a {
   font-size: 13px;
+  font-weight: 600;
   margin-right: 60px;
+  font-family: "Roboto";
+  line-height: 15.23px;
 }
-header a:hover, header a .active {
+header a:hover, header .active {
   color: #07C8C8;
 }
 
@@ -113,13 +117,13 @@ header a:hover, header a .active {
   background-color: #272733;
 }
 .page_welcome {
-  background-image: url("../../public/background-block-1.png");
-  height: 750px;
+  background: url("../../public/background-block-1.png") no-repeat center center fixed;
+  background-size: cover;
 }
 .page_feedback {
+  background: url("../../public/background-block-2.svg") no-repeat center center fixed;
+  background-size: cover;
   background-color: #272733;
-  background-image: url("../../public/background-block-2.svg");
-  height: 950px;
 }
 .page_footer {
   background-color: #3D4050;
@@ -145,9 +149,13 @@ header a:hover, header a .active {
 }
 
 .welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
   width: 780px;
   margin-top: 100px;
   padding-top: 102px;
+  padding-bottom: 203px;
   color: #2A2B30;
 }
 .welcome__title {
@@ -155,24 +163,56 @@ header a:hover, header a .active {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 57.6px;
-  margin-bottom: 80px;
 }
 .welcome__text {
   font-size: 20px;
 }
 .welcome__text p:first-child {
   font-weight: 700;
+  margin-bottom: 10px;
+}
+.welcome__text p {
+  margin-bottom: 5px;
+}
+.welcome__text p:last-child {
+  margin-bottom: 0;
+}
+.welcome__btns {
+  display: flex;
+  gap: 30px;
+  line-height: 15.6px;
+}
+.welcome__btns .btn {
+  background: #07C8C8;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  width: 183px;
+}
+.welcome__btns .btn:hover {
+  background: #05dfdf;
+}
+.welcome__btns .btn-turquoise {
+  background: #fff;
+  border: 1px solid #2A2B30;
+  color: #2A2B30;
 }
 
 .feedback {
   text-align: center;
   font-size: 18px;
   padding-top: 121px;
+  padding-bottom: 151px;
 }
 .feedback__title {
   font-size: 36px;
   text-transform: uppercase;
   margin-bottom: 30px;
+  line-height: 42.19px;
+  font-family: "Roboto";
+  font-weight: 400;
 }
 .feedback__text {
   font-size: 20px;
@@ -185,6 +225,7 @@ header a:hover, header a .active {
   gap: 30px;
   margin-bottom: 80px;
   font-size: 16px;
+  line-height: 19.2px;
   position: relative;
 }
 .feedback__steps .dots {
@@ -203,13 +244,12 @@ header a:hover, header a .active {
 .feedback__info {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+  line-height: 21.6px;
 }
 .feedback__info .input-block {
-  width: 31%;
-}
-.feedback__info .input-range {
-  width: 62%;
+  width: 31.6%;
 }
 .feedback__info select {
   padding: 10px;
@@ -239,9 +279,12 @@ header a:hover, header a .active {
   opacity: 1;
 }
 .feedback__info input[type=submit] {
+  font-size: 15px;
+  font-family: "Roboto";
+  line-height: 17.58px;
   padding: 10px;
-  border-radius: 3px;
-  border: none;
+  border-radius: 4px;
+  border: 1px solid #FFFFFF;
   outline: none;
   cursor: pointer;
   background: #07C8C8;
@@ -250,20 +293,54 @@ header a:hover, header a .active {
 .feedback__info input[type=submit]:hover {
   background: #05dfdf;
 }
+.feedback__info .input-range {
+  width: 65.8%;
+  line-height: 21.6px;
+}
+.feedback__info .input-range div {
+  display: flex;
+  justify-content: space-between;
+}
+.feedback__info .input-range p:last-child {
+  color: rgba(255, 255, 255, 0.5333333333);
+}
+.feedback__info input[type=range] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+}
+.feedback__info input[type=range]:hover {
+  opacity: 1;
+}
+.feedback__info input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background: url("../../public/page/feedback/vector_range.svg");
+  cursor: pointer;
+}
 .feedback__info .input-file {
+  font-family: "Roboto";
+  font-weight: 300;
   cursor: pointer;
   position: relative;
   outline: none;
   font-size: 15px;
+  line-height: 17.58px;
   border-radius: 3px;
   background-color: #fff;
   color: #272733;
-  padding: 12px 20px;
+  padding: 0 20px;
   border: none;
-}
-.feedback__info .input-file div {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .feedback__info .input-file p {
   margin-left: 10px;
