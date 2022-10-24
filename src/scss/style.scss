@@ -32,6 +32,44 @@ header {
     a:hover, .active {
         color: $background-turquoise;
     }
+
+    @media(max-width: 850px) {
+        a {
+            margin-right: 30px;
+        }
+
+        img {
+            max-width: 60%;
+        }
+    }
+
+    @media(max-width: 640px) {
+        a{
+            font-size: 18px;
+        }
+
+        img {
+            display: none;
+        }
+
+        .row {
+            justify-content: start;
+        }
+    }
+
+    @media(max-width: 524px) {
+        a{
+            font-size: 14px;
+        }
+
+    }
+
+    @media(max-width: 460px) {
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 .page {
@@ -56,6 +94,11 @@ header {
 .wrapper {
     max-width: 1164px;
     margin: 0 auto;
+
+    @media(max-width: 1300px) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
 }
 
 .row {
@@ -70,15 +113,24 @@ header {
 
 .footer_height {
     height: 80px;
+
+    @media(max-width: 1090px) {
+        height: auto;
+        padding: 10px;
+    }
+
+    @media(max-width: 472px) {
+        height: auto;
+    }
 }
 
 .welcome {
     display: flex;
     flex-direction: column;
     gap: 80px;
-    width: 780px;
     margin-top: 100px;
     padding-top: 102px;
+    padding-right: 374px;
     padding-bottom: 203px;
     color: #2A2B30;
 
@@ -131,6 +183,58 @@ header {
             color: #2A2B30;
         }
     }
+
+    @media(max-width: 1150px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media(max-width: 850px) {
+        &__title {
+            font-size: 40px;
+        }
+    }
+
+    @media(max-width: 750px) {
+        &__title {
+            font-size: 30px;
+        }
+    }
+
+    @media(max-width: 600px) {
+        &__title {
+            font-size: 26px;
+            line-height: 40px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+    }
+
+    @media(max-width: 390px) {
+        &__title {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        &__text {
+            font-size: 14px;
+
+            p:first-child {
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+    
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &__btns {
+            flex-direction: column;
+        }
+    }
 }
 
 .feedback {
@@ -168,6 +272,7 @@ header {
             top: 50px;
             left:50%;
             transform:translate(-50%, -50%);
+            z-index: 0;
         }
 
         .item {
@@ -176,7 +281,13 @@ header {
             flex-direction: column;
             align-items: center;
             gap: 20px;
+
+            img {
+                position: relative;
+                z-index: 10;
+            }
         }
+
     }
 
     &__info {
@@ -306,6 +417,68 @@ header {
             opacity: 0;
         }
     }
+
+    @media(max-width: 730px) {
+        &__text {
+            margin-bottom: 40px;
+        }
+        
+        &__steps {
+            flex-direction: column;
+
+            .dots {
+                display: none;
+            }
+        }
+
+        .item {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            img {
+                width: 10%;
+            }
+        }
+    }
+
+    @media(max-width: 660px) {
+        &__info {
+            flex-direction: column;
+            align-items: center;
+
+            .input-file {
+                padding: 10px;
+            }
+
+            .input-block {
+                width: 80%;
+            }
+
+            .input-range {
+                font-size: 15px;
+            }
+        }
+    }
+
+    @media(max-width: 472px) {
+        &__title {
+            font-size: 28px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+
+        .item {
+            font-size: 13px;
+        }
+    }
+
+    @media(max-width: 472px) {
+        .item {
+            font-size: 10px;
+        }
+    }
 }
 
 footer {
@@ -340,6 +513,35 @@ footer {
                     }
                 }
             }
+        }
+    }
+
+    @media(max-width: 1090px) {
+        .row {
+            flex-direction: column-reverse;
+            gap: 15px;
+        }
+
+        .info {
+            gap: 20px;
+        }
+
+        .border {
+            border: none;
+        }
+    }
+
+    @media(max-width: 530px) {
+        font-size: 11px;
+
+        .info {
+            gap: 10px;
+        }
+    }
+
+    @media(max-width: 472px) {
+        .info {
+            flex-direction: column;
         }
     }
 }
