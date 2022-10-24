@@ -147,11 +147,11 @@ header a:hover, header .active {
   background-color: #272733;
 }
 .page_welcome {
-  background: url("../../public/background-block-1.png") no-repeat center center fixed;
+  background: url("../public/background-block-1.png") no-repeat center center fixed;
   background-size: cover;
 }
 .page_feedback {
-  background: url("../../public/background-block-2.svg") no-repeat center center fixed;
+  background: url("../public/background-block-2.svg") no-repeat center center fixed;
   background-size: cover;
   background-color: #272733;
 }
@@ -418,7 +418,7 @@ header a:hover, header .active {
   appearance: none;
   width: 40px;
   height: 40px;
-  background: url("../../public/page/feedback/vector_range.svg");
+  background: url("../public/page/feedback/vector_range.svg");
   cursor: pointer;
 }
 .feedback__info .input-file {
